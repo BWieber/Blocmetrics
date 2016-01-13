@@ -25,10 +25,14 @@ group :production do
 end
 group :development, :test do
   gem 'byebug'
+  gem 'rspec-rails', '~> 3.0'
 end
 
 group :development do
   gem 'sqlite3'
   gem 'web-console', '~> 2.0'
   gem 'spring'
+  gem 'factory_girl'
+  gem 'faker'
+  gem 'capybara', '~> 2.4'
 end
