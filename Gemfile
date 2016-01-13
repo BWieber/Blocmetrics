@@ -3,6 +3,7 @@ source 'https://rubygems.org'
 gem 'rails', '4.2.4'
 
 gem 'devise'
+gem 'faker'
 
 gem 'rspec', '~> 3.4'
 
@@ -32,7 +33,6 @@ group :development do
   gem 'sqlite3'
   gem 'web-console', '~> 2.0'
   gem 'spring'
-  gem 'factory_girl'
-  gem 'faker'
+  gem 'factory_girl_rails'
   gem 'capybara', '~> 2.4'
 end
