@@ -8,5 +8,7 @@ Rails.application.routes.draw do
 
   get 'welcome/about'
 
+  resources :registered_applications
+
 
 end
