@@ -1,2 +1,8 @@
-<h1>RegisteredApplications#index</h1>
-<p>Find me in app/views/registered_applications/index.html.erb</p>
+<h1> Currently Tracked Apps </h1>
+
+<% @applications.each do |app| %>
+  <div class='media'>
+    <h3> <%= app.name %> </h3>
+    <p> <%= app.url %> </p>
+  </div>
+  <% end %>

@@ -8,6 +8,8 @@ Rails.application.routes.draw do
 
   get 'welcome/about'
 
+  resources :users, only: [:show]
+
   resources :registered_applications
 
 

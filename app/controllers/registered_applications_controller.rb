@@ -13,7 +13,7 @@ class RegisteredApplicationsController < ApplicationController
   end
 
   def create
-    @application = RegisteredApplication.create(app_params)
+    @application = RegisteredApplication.new(app_params)
     @application.user = current_user
 
     if @application.save
@@ -60,7 +60,7 @@ class RegisteredApplicationsController < ApplicationController
   private
 
   def app_params
-    params.require(:application).permit(:name, :url)
+    params.require(:registered_application).permit(:name, :url)
   end
 
 end
