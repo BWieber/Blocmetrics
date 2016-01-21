@@ -2,7 +2,7 @@
 
 <% @applications.each do |app| %>
   <div class='media'>
-    <h3> <%= app.name %> </h3>
+    <h3> <%=link_to app.name, registered_application_path(app) %> </h3>
     <p> <%= app.url %> </p>
   </div>
   <% end %>

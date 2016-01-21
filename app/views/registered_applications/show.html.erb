@@ -1,1 +1,6 @@
 <h1> <%= @application.name %> </h1>
+
+  <h3> Events: </h3>
+    <% @events.each do |event| %>
+      <h5> <%= event[0] %> </h4>
+    <% end %>
