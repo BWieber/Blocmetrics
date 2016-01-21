@@ -19,6 +19,14 @@ users = User.all
 end
 applications = RegisteredApplication.all
 
+50.times do
+  Event.create!(
+  name:  Faker::Company.name,
+  registered_application: applications.sample
+  )
+events = Event.all
+end
+
 # Create an admin user
 admin = User.create!(
     username: 'Admin',
@@ -37,4 +45,5 @@ usul = User.create!(
 
 puts "Seed finished"
 puts "#{User.count} users created."
-puts "#{RegisteredApplication.count} bookmarks created."
+puts "#{RegisteredApplication.count} applications created."
+puts "#{Event.count} events created."

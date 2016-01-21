@@ -4,7 +4,19 @@
   <% end %>
 </h1>
 
+  <div class='container'>
+    <div class='media'>
+      <div class='media-body'>
   <% @user_applications.each do |app| %>
-  <h3> <%= app.name %> <%= link_to "Delete Application", registered_application_path(app), method: :delete, class: 'btn btn-danger' %> </h3> 
-  <p> <%= app.url %> </p>
-  <% end %>
+  <h3> <%= app.name %> <%= link_to "Delete Application", registered_application_path(app), method: :delete, class: 'btn btn-danger' %> </h3>
+  <h4> Url: <%= app.url %> </h4>
+        <div class='media-body'>
+          <h5> Events: <br> </h5>
+          <% app.events.each do |event| %>
+          <p> <%= event.name %> </p>
+          <% end %>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
