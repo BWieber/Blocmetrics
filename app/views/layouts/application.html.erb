@@ -13,7 +13,11 @@
     <ul class="nav nav-tabs">
       <li><%= link_to "Blocmetrics", welcome_index_path %></li>
       <li><%= link_to "About", welcome_about_path %></li>
+
+      <% if user_signed_in? %>
       <li><%= link_to "My Profile", user_path(current_user) %></li>
+      <% end %>
+
       <li><%= link_to "Tracked Apps", registered_applications_path %></li>
 
       <div class="pull-right user-info">
