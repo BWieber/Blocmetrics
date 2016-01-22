@@ -5,7 +5,7 @@ class API::EventsController < ApplicationController
   def set_access_control_headers
     headers['Access-Control-Allow-Origin'] = '*'
     headers['Access-Control-Allow-Methods'] = 'POST, GET, OPTIONS'
-    headers['Access-Controler-Allow-Headers'] = 'Content-Type'
+    headers['Access-Control-Allow-Headers'] = 'Content-Type'
   end
 
   skip_before_action :verify_authenticity_token

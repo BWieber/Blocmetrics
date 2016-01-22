@@ -1,6 +1,8 @@
 <h1> <%= @application.name %> </h1>
 
   <h3> Events: </h3>
-    <% @events.each do |event| %>
-      <h5> <%= event[0] %> </h4>
+    <% @events.each do |event, visit| %>
+      <h5> Event: <%= event %> </h5>
+      <h5> Times Visited: <%= visit.count %> </h5>
+        <br>
     <% end %>
