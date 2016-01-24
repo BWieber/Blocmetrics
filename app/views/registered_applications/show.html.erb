@@ -6,3 +6,10 @@
       <h5> Times Visited: <%= visit.count %> </h5>
         <br>
     <% end %>
+
+
+    <%= pie_chart @application.events.group(:name).count %>
+
+    <br>
+
+    <%= line_chart @application.events.group_by_day(:created_at).count %>

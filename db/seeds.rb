@@ -22,7 +22,8 @@ applications = RegisteredApplication.all
 50.times do
   Event.create!(
   name:  Faker::Company.name,
-  registered_application: applications.sample
+  registered_application: applications.sample,
+  created_at: rand(10.years).seconds.ago
   )
 events = Event.all
 end
