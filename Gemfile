@@ -9,6 +9,7 @@ gem 'chartkick'
 gem 'groupdate'
 
 gem 'rspec', '~> 3.4'
+gem 'figaro'
 
 gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'

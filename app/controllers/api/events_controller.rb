@@ -21,7 +21,7 @@ class API::EventsController < ApplicationController
       elsif @event.save
         render json: @event, status: :created
       else
-        render json: {errors: @event.errors}, status: :unprocessable_entity
+        render json: {errors: @event.errors}, status: :unprocessable_entity 
       end
   end
 
