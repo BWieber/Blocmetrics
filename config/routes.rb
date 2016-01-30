@@ -4,9 +4,15 @@ Rails.application.routes.draw do
 
   root 'welcome#index'
 
+  get 'about' => 'welcome#about'
+
+  get 'brandon' => 'welcome#brandon'
+
+  get 'code' => 'welcome#code'
+
   get 'welcome/index'
 
-  get 'welcome/about'
+  get 'welcome/about' => 'about'
 
   resources :users, only: [:show]
 

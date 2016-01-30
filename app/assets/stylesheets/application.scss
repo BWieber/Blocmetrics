@@ -12,6 +12,12 @@
  *
  *= require_tree .
  *= require_self
+ *= require bootstrap.min
+ *= require font-awesome
+ *= require prettyPhoto
+ *= require responsive
+ *= require main
+ *= require animate.min
  */
 
 @import "bootstrap-sprockets";
