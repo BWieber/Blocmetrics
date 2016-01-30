@@ -1,0 +1,37 @@
+<div class="skill-wrap clearfix">
+
+    <div class="center wow fadeInDown">
+      <h2>Inside Blocmetrics</h2>
+      <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut <br> et dolore magna aliqua. Ut enim ad minim veniam</p>
+    </div>
+
+  <div class="team">
+    <div class="center wow fadeInDown">
+      <h2>Javascript API Code</h2>
+      <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut <br> et dolore magna aliqua. Ut enim ad minim veniam</p>
+      <pre>
+      <code> var blocmetrics = {}; </code> <br>
+      <code> blocmetrics.report = function(eventName) { </code><br>
+      <code> event = {event: { name: eventName}};</code><br>
+      <code> var request = new XMLHttpRequest();</code><br>
+      <code> request.open("POST", "http://bwieber-blocmetrics.herokuapp.com/api/events", true); </code><br>
+      <code> request.setRequestHeader('Content-Type', 'application/json');</code><br>
+      <code> request.send(JSON.stringify(event));</code><br>
+      <code> } </code>
+      </pre>
+    </div>
+  </div>
+
+  <div class="team">
+    <div class="center wow fadeInDown">
+      <h2> The content_for helper method</h2>
+      <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut <br> et dolore magna aliqua. Ut enim ad minim veniam</p>
+
+      <pre>
+        <p> <% content_for :analytic do %> </på>
+        <p> <script type="text/javascript"> $(document).ready(function(){ blocmetrics.report("Visited_home_page"); }); </script> <p>
+        <p> <% end %> </p>
+      </pre>
+    </div>
+  </div>
+</div>
