@@ -26,12 +26,15 @@
     <div class="center wow fadeInDown">
       <h2> The content_for helper method</h2>
       <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut <br> et dolore magna aliqua. Ut enim ad minim veniam</p>
+      <pre class='prettyprint'>
+      <p>  &lt<%= "% content_for " + ":analytic %" %>&gt </p>
+      <p>  &lt <%= 'script type="text/javascript"> $(document).ready(function(){ blocmetrics.report("Visited_home_page"); }); </script' %> &gt </p>
+      <p>  &lt<%= "% end %" %>&gt </p>
 
-      <pre>
-        <code> <% content_for :analytic do %> </code>
-        <code> <script type="text/javascript"> $(document).ready(function(){ blocmetrics.report("Visited_home_page"); }); </script> </code>
-        <code> <% end %> </code>
       </pre>
+
+
+
     </div>
   </div>
 </div>
