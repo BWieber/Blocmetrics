@@ -2,22 +2,22 @@
 
     <div class="center wow fadeInDown">
       <h2>Inside Blocmetrics</h2>
-      <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut <br> et dolore magna aliqua. Ut enim ad minim veniam</p>
+      <p class="lead">The code necessary to start your own custom analytics. </p>
     </div>
 
   <div class="team">
     <div class="center wow fadeInDown">
       <h2>Javascript API Code</h2>
-      <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut <br> et dolore magna aliqua. Ut enim ad minim veniam</p>
+      <p class="lead">Javascript is at the heart of the analytics process. This code is located in the application.js file. <br> Ensure that your POST action is set to your website. <br> It's also vital to rails_ENV=production rake assets:precompile to get the JS to run in production.</p>
       <pre>
-      <code> var blocmetrics = {}; </code> <br>
-      <code> blocmetrics.report = function(eventName) { </code><br>
-      <code> event = {event: { name: eventName}};</code><br>
-      <code> var request = new XMLHttpRequest();</code><br>
-      <code> request.open("POST", "http://bwieber-blocmetrics.herokuapp.com/api/events", true); </code><br>
-      <code> request.setRequestHeader('Content-Type', 'application/json');</code><br>
-      <code> request.send(JSON.stringify(event));</code><br>
-      <code> } </code>
+       var blocmetrics = {};
+       blocmetrics.report = function(eventName) {
+       event = {event: { name: eventName}};
+       var request = new XMLHttpRequest();
+       request.open("POST", "http:bwieber-blocmetrics.herokuapp.comapievents", true);
+       request.setRequestHeader('Content-Type', 'applicationjson');
+       request.send(JSON.stringify(event));
+       }
       </pre>
     </div>
   </div>
@@ -25,14 +25,19 @@
   <div class="team">
     <div class="center wow fadeInDown">
       <h2> The content_for helper method</h2>
-      <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut <br> et dolore magna aliqua. Ut enim ad minim veniam</p>
-      <pre class='prettyprint'>
-      <p>  &lt<%= "% content_for " + ":analytic %" %>&gt </p>
-      <p>  &lt <%= 'script type="text/javascript"> $(document).ready(function(){ blocmetrics.report("Visited_home_page"); }); </script' %> &gt </p>
-      <p>  &lt<%= "% end %" %>&gt </p>
+      <p class="lead"> From <strong>'Rails Guides'</strong>: The content_for method allows you to insert content into a named yield block in your layout. <br> It's also useful for inserting tags that load page-specific JavaScript or css files into the header of an otherwise generic layout."</p>
+      <p> Within your layouts/application.html.erb, use the following code <i>before</i> your body and html close tags: </p>
+
+      <code>  &lt<%= "%= yield " + ":analytic %" %>&gt </code>
+
+      <p> This allows for you to call the content_for method on any view page, injecting the analytics JS onto that page. </p>
+      <pre>
+      &lt<%= "% content_for " + ":analytic %" %>&gt
+      &lt<%= 'script type="text/javascript"> $(document).ready(function(){ blocmetrics.report("Visited_home_page"); }); </script' %>&gt
+      &lt<%= "% end %" %>&gt
       </pre>
 
-
+      <p> With this done, whatever message you put within the blocmetrics.report parameters will be sent in the form of JSON data to whatever site you have set to receive it. Happy Analyizing! </p>
 
     </div>
   </div>
